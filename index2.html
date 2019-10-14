@@ -31,8 +31,6 @@
    <!-- 내부스타일 -->
    <style>
 
-      .clearfix::after{display:block;content:"";clear:both;}
-
       /* 기본스타일(모바일) */
 
       #wrap{width:100%;max-width:1450px;margin:0 auto;}
@@ -40,14 +38,25 @@
       /* 임시 */.cont01,.cont02{height:200px;}
       
       /* 헤더스타일 */
-      .header{background:white;height:50px;position:relative;}
-      .header>.logo{float:left;padding:14px 5% 16px;}
+      .header{
+         background:white;
+         height:50px;
+         padding:0 5%; 
+         position:relative;
+         display:flex;
+         flex-flow:row nowrap;
+         justify-content:space-between;
+         align-items:center;
+      }
       .header>.logo>a{font-size:20px;font-weight:bold;color:darkblue;}
-      .tgl_btn{float:right;padding:15px 5%;cursor:pointer;}
+      .tgl_btn{cursor:pointer;}
       .tgl_btn>li{width:20px;height:2px;background:darkblue;margin-bottom:7px;text-indent:-9999px;}
       .nav{width:100%;background:darkblue; position:absolute;left:0;top:100%;display:none;}
       .nav>p{padding:6px 5%;border-bottom:1px solid #333;}
-      .nav>p>a{font-size:14px;font-weight:400; color:white;}
+      .nav>p>a{font-size:14px;font-weight:300; color:white;}
+
+
+
 
       .banner{background:green;}
       .we_are{background:blue;}
@@ -56,54 +65,13 @@
       .contact{background:yellow;}
       .map{background:gray;}
       .footer{background:red;}
-
-      /* 테블릿 스타일 */
-      @media(min-width:768px){
-         .header{
-            height:60px;
-            position:static;
-         }
-         .header>.logo{
-            padding:18px 5% 22px;
-         }
-         .tgl_btn{
-            display:none;
-         }
-         .nav{
-            padding:20px 5%;
-            float:right;
-            width:60%;
-            background:transparent;
-            position:static;
-            display:block;
-            text-align:right;
-         }
-         .nav>p{
-            padding:0;
-            padding-left:5%;
-            border-bottom:none;
-            display:inline-block;
-         }
-         .nav>p>a{
-            font-size:14px;
-            font-weight:400; 
-            color:darkblue;
-         }
-
-      }
-
-      /* pc 스타일 */
-      @media(min-width:1132px){
-
-      }
-
    </style>
 </head>
 <body>
    <div id="wrap">
       <header class="cont01 header clearfix">
          <h1 class="logo">
-            <a href="index.html">
+            <a href="index2.html">
                INDIGO
             </a>
          </h1>
@@ -113,7 +81,7 @@
             <li>3번</li>
          </ul>
          <nav class="nav">
-            <p><a href="index.html">HOME</a></p>
+            <p><a href="index2.html">HOME</a></p>
             <p><a href="#">WE_ARE</a></p>
             <p><a href="#">WORK</a></p>
             <p><a href="#">BLOG</a></p>
