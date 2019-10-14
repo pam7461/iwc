@@ -1,1 +1,16 @@
 @charset "utf-8";
+
+*{
+   margin:0;
+   padding:0;
+   border:none;
+   font-size:16px;
+   font-weight:400;
+   color:#333;
+   vertical-align:baseline;
+}
+a{color:#333;text-decoration: none;}
+
+ul, ol{list-style:none;}
+
+body{font-family: 'Roboto', sans-serif;}

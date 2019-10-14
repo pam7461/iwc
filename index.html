@@ -21,15 +21,74 @@
    <!-- 스크립트 -->
    <script src="js/jquery.min.js"></script>
    <script>
-   
+      $(function(){
+         $(".tgl_btn").click(function(){
+            $(".nav").stop().slideToggle("fast");
+         });
+      });
    </script>
 
    <!-- 내부스타일 -->
    <style>
-      *{font-family: 'Roboto', sans-serif;}
+
+      .clearfix::after{display:block;content:"";clear:both;}
+
+      /* 기본스타일(모바일) */
+
+      #wrap{width:100%;max-width:1450px;margin:0 auto;}
+      .cont02{width:80%;margin:0 auto;}
+      /* 임시 */.cont01,.cont02{height:200px;}
+      
+      /* 헤더스타일 */
+      .header{background:white;height:50px;position:relative;}
+      .header>.logo{float:left;padding:14px 5% 16px;}
+      .header>.logo>a{font-size:20px;font-weight:bold;color:darkblue;}
+      .tgl_btn{float:right;padding:15px 5%;cursor:pointer;}
+      .tgl_btn>li{width:20px;height:2px;background:darkblue;margin-bottom:7px;text-indent:-9999px;}
+      .nav{width:100%;background:darkblue; position:absolute;left:0;bottom:-160px;display:none;}
+      .nav>p{padding:6px 5%;border-bottom:1px solid #333;}
+      .nav>p>a{font-size:14px;font-weight:400; color:white;}
+
+
+
+
+      .banner{background:green;}
+      .we_are{background:blue;}
+      .work{background:cyan;}
+      .blog{background:magenta;}
+      .contact{background:yellow;}
+      .map{background:gray;}
+      .footer{background:red;}
    </style>
 </head>
 <body>
-   
+   <div id="wrap">
+      <header class="cont01 header clearfix">
+         <h1 class="logo">
+            <a href="index.html">
+               INDIGO
+            </a>
+         </h1>
+         <ul class="tgl_btn">
+            <li>1번</li>
+            <li>2번</li>
+            <li>3번</li>
+         </ul>
+         <nav class="nav">
+            <p><a href="index.html">HOME</a></p>
+            <p><a href="#">WE_ARE</a></p>
+            <p><a href="#">WORK</a></p>
+            <p><a href="#">BLOG</a></p>
+            <p><a href="#">CONTACT US</a></p>
+         </nav>
+      </header>
+      <section class="cont01 banner"></section>
+      <section class="cont02 we_are"></section>
+      <section class="cont01 work"></section>
+      <section class="cont02 blog"></section>
+      <section class="cont02 contact"></section>
+      <section class="cont01 map"></section>
+      <footer class="cont02 footer"></footer>
+   </div>
 </body>
 </html>
