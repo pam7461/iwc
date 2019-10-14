@@ -13,6 +13,7 @@
    
    <!-- 폰트 -->
    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
    <!-- 파비콘 -->
    <link rel="shortcut icon" href="images/favicon/favicon.ico">
@@ -38,9 +39,9 @@
       #wrap{width:100%;max-width:2200px;margin:0 auto;}
       .cont02{width:81.81818181818182%;max-width:1800px;margin:0 auto;}
       /* 임시 */.cont01,.cont02{height:200px;}
-      .sec_tit{font-size:32px;color:darkblue;text-align:center;margin:10px auto;}
+      .sec_tit{font-size:3.5rem;color:darkblue;text-align:center;margin:10px auto;}
       .sub_tit{font-size:24px;color:blue;text-align:center;margin:10px auto;}
-      .sec_txt{font-size:16px;text-align:center;margin:10px auto;line-height:1.5rem;}
+      .sec_txt{font-family: 'Hepta Slab', serif;font-size:16px;text-align:center;margin:10px auto;line-height:1.5rem;}
       
       /* 헤더스타일 */
       .header{background:white;height:50px;position:relative;}
@@ -58,7 +59,7 @@
       .banner img{width:100%;}
 
       /* we_are 스타일 */
-      .we_are{background:white;height:auto;}
+      .we_are{background:white;height:auto;border-bottom:2px solid gray;}
       .we_are>.we_are_tit{margin:50px auto;}
       .we_are>.we_are_content{margin:50px auto;}
       .we_are_content>ul>li{margin:50px auto;}
@@ -104,10 +105,23 @@
             color:darkblue;
          }
 
+         /* we_are 스타일 */
+         .we_are_content>ul>li{box-sizing:border-box;float:left;width:25%;padding-left: 0.5555555555555556%;padding-right: 0.5555555555555556%;}
+         .we_are_img{height:100px;}
+         .we_are_img>img{width:50%;max-width:100px;}
+
+
+
+
       }
 
       /* pc 스타일 */
       @media(min-width:1132px){
+
+         /* we_are 스타일 */
+         .we_are>.we_are_tit{}
+         .we_are_tit>.sec_tit{box-sizing:border-box; float:left;width:37.5%;padding-left:0.5555555555555556%;padding-right:0.5555555555555556%; text-align:left;}
+         .we_are_tit>.sec_txt{box-sizing:border-box; float:right;width:62.5%;border-left:2px solid gray;padding-left:3%;padding-right:0.5555555555555556%;text-align:left;}
 
       }
 
@@ -167,13 +181,13 @@
             </p>
          </article>
          <article class="row02 we_are_content">
-            <ul>
+            <ul class="clearfix">
                <li>
                   <a href="#">
                      <ul>
                         <li class="we_are_img"><img src="images/s-images/promo01.png" alt="프로모션01"></li>
                         <li class="sub_tit">HOME</li>
-                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga, fugiat id sequi neque dignissimos quis tempora excepturi, laborum nobis, optio veniam dolorum a! Impedit animi nisi iste cum quia?</li>
+                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga</li>
                      </ul>
                   </a>
                </li>
@@ -182,8 +196,7 @@
                      <ul>
                         <li class="we_are_img"><img src="images/s-images/promo02.png" alt="프로모션02"></li>
                         <li class="sub_tit">WE_ARE</li>
-                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga, fugiat id sequi neque dignissimos quis tempora excepturi, laborum nobis, optio veniam dolorum a! Impedit animi nisi iste cum quia?</li>
-                     </ul>
+                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga</li>                     </ul>
                   </a>
                </li>
                <li>
@@ -191,8 +204,7 @@
                      <ul>
                         <li class="we_are_img"><img src="images/s-images/promo03.png" alt="프로모션03"></li>
                         <li class="sub_tit">WORK</li>
-                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga, fugiat id sequi neque dignissimos quis tempora excepturi, laborum nobis, optio veniam dolorum a! Impedit animi nisi iste cum quia?</li>
-                     </ul>
+                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga</li>                     </ul>
                   </a>
                </li>
                <li>
@@ -200,8 +212,7 @@
                      <ul>
                         <li class="we_are_img"><img src="images/s-images/promo04.png" alt="프로모션04"></li>
                         <li class="sub_tit">BLOG</li>
-                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga, fugiat id sequi neque dignissimos quis tempora excepturi, laborum nobis, optio veniam dolorum a! Impedit animi nisi iste cum quia?</li>
-                     </ul>
+                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga</li>                     </ul>
                   </a>
                </li>
             </ul>
