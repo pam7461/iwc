@@ -55,10 +55,11 @@
       .nav>p{padding:6px 5%;border-bottom:1px solid #333;}
       .nav>p>a{font-size:14px;font-weight:300; color:white;}
 
-
-
-
-      .banner{background:green;}
+      /* 베너 스타일 */
+      .banner{height:auto;}
+      .banner li:nth-child(2),.banner li:nth-child(3){display:none;}
+      .banner img{width:100%;}
+      
       .we_are{background:blue;}
       .work{background:cyan;}
       .blog{background:magenta;}
@@ -88,7 +89,25 @@
             <p><a href="#">CONTACT US</a></p>
          </nav>
       </header>
-      <section class="cont01 banner"></section>
+      <section class="cont01 banner">
+            <ul>
+               <li>
+                  <a href="#">
+                     <img src="images/p-images/slide01.jpg" alt="슬라이드01">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/p-images/slide01.jpg" alt="슬라이드01">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/p-images/slide01.jpg" alt="슬라이드01">
+                  </a>
+               </li>
+            </ul>
+      </section>
       <section class="cont02 we_are"></section>
       <section class="cont01 work"></section>
       <section class="cont02 blog"></section>

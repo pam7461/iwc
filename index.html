@@ -35,9 +35,12 @@
 
       /* 기본스타일(모바일) */
 
-      #wrap{width:100%;max-width:1450px;margin:0 auto;}
-      .cont02{width:80%;margin:0 auto;}
+      #wrap{width:100%;max-width:2200px;margin:0 auto;}
+      .cont02{width:81.81818181818182%;max-width:1800px;margin:0 auto;}
       /* 임시 */.cont01,.cont02{height:200px;}
+      .sec_tit{font-size:32px;color:darkblue;text-align:center;margin:10px auto;}
+      .sub_tit{font-size:24px;color:blue;text-align:center;margin:10px auto;}
+      .sec_txt{font-size:16px;text-align:center;margin:10px auto;line-height:1.5rem;}
       
       /* 헤더스타일 */
       .header{background:white;height:50px;position:relative;}
@@ -49,8 +52,19 @@
       .nav>p{padding:6px 5%;border-bottom:1px solid #333;}
       .nav>p>a{font-size:14px;font-weight:400; color:white;}
 
-      .banner{background:green;}
-      .we_are{background:blue;}
+      /* 베너 스타일 */
+      .banner{height:auto;}
+      .banner li:nth-child(2),.banner li:nth-child(3){display:none;}
+      .banner img{width:100%;}
+
+      /* we_are 스타일 */
+      .we_are{background:white;height:auto;}
+      .we_are>.we_are_tit{margin:50px auto;}
+      .we_are>.we_are_content{margin:50px auto;}
+      .we_are_content>ul>li{margin:50px auto;}
+      .we_are_img{text-align:center;}
+      .we_are_img>img{width:18.75%;}
+
       .work{background:cyan;}
       .blog{background:magenta;}
       .contact{background:yellow;}
@@ -101,6 +115,7 @@
 </head>
 <body>
    <div id="wrap">
+      <!-- 헤더 -->
       <header class="cont01 header clearfix">
          <h1 class="logo">
             <a href="index.html">
@@ -120,8 +135,79 @@
             <p><a href="#">CONTACT US</a></p>
          </nav>
       </header>
-      <section class="cont01 banner"></section>
-      <section class="cont02 we_are"></section>
+
+      <!-- 베너 -->
+      <section class="cont01 banner">
+         <ul>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/slide01.jpg" alt="슬라이드01">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/slide01.jpg" alt="슬라이드01">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/slide01.jpg" alt="슬라이드01">
+               </a>
+            </li>
+         </ul>
+      </section>
+
+      <!-- we are 섹션 -->
+      <section class="cont02 we_are">
+         <article class="row01 we_are_tit clearfix">
+            <h2 class="sec_tit">WE ARE</h2>
+            <p class="sec_txt">
+               Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+               piece of classical Latin literature from 45 BC, making it over 2000 years old.
+            </p>
+         </article>
+         <article class="row02 we_are_content">
+            <ul>
+               <li>
+                  <a href="#">
+                     <ul>
+                        <li class="we_are_img"><img src="images/s-images/promo01.png" alt="프로모션01"></li>
+                        <li class="sub_tit">HOME</li>
+                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga, fugiat id sequi neque dignissimos quis tempora excepturi, laborum nobis, optio veniam dolorum a! Impedit animi nisi iste cum quia?</li>
+                     </ul>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <ul>
+                        <li class="we_are_img"><img src="images/s-images/promo02.png" alt="프로모션02"></li>
+                        <li class="sub_tit">WE_ARE</li>
+                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga, fugiat id sequi neque dignissimos quis tempora excepturi, laborum nobis, optio veniam dolorum a! Impedit animi nisi iste cum quia?</li>
+                     </ul>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <ul>
+                        <li class="we_are_img"><img src="images/s-images/promo03.png" alt="프로모션03"></li>
+                        <li class="sub_tit">WORK</li>
+                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga, fugiat id sequi neque dignissimos quis tempora excepturi, laborum nobis, optio veniam dolorum a! Impedit animi nisi iste cum quia?</li>
+                     </ul>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <ul>
+                        <li class="we_are_img"><img src="images/s-images/promo04.png" alt="프로모션04"></li>
+                        <li class="sub_tit">BLOG</li>
+                        <li class="sec_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fuga, fugiat id sequi neque dignissimos quis tempora excepturi, laborum nobis, optio veniam dolorum a! Impedit animi nisi iste cum quia?</li>
+                     </ul>
+                  </a>
+               </li>
+            </ul>
+         </article>
+      </section>
+
       <section class="cont01 work"></section>
       <section class="cont02 blog"></section>
       <section class="cont02 contact"></section>
