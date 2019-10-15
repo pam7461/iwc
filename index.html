@@ -85,10 +85,15 @@
       .blog_list p{text-align:left;}
       .blog_list>li>.sub_tit{color:#ccc;}
 
+      /* contact 스타일 */
+      .contact{height:auto;}
+
+      .contact input,.contact textarea{display:block;box-sizing:border-box;width:100%;margin:30px auto;border-bottom:1px solid gray;padding:5px;}
+      .contact input::placeholder,.contact textarea::placeholder{color:rgba(0, 0, 137,0.5);}
+      .contact>.contact_list>li:last-child>input:last-of-type{width:auto;padding:20px;background:darkblue;color:white;border:1px solid darkblue;cursor:pointer;float:right;}
+      .contact>.contact_list>li:last-child>input:last-of-type:hover{background:white;color:darkblue;border:1px solid darkblue; cursor:pointer;}
 
 
-
-      .contact{background:yellow;}
       .map{background:gray;}
       .footer{background:red;}
 
@@ -363,7 +368,22 @@
          </ul>
       </section>
 
-      <section class="cont02 contact"></section>
+      <!-- contact 섹션 -->
+      <section class="cont02 contact clearfix">
+         <h2 class="sec_tit">CONTACT</h2>
+         <ul class="contact_list clearfix">
+            <li>
+               <input type="text" placeholder="Name">
+               <input type="tel" placeholder="Phone Number">
+               <input type="email" placeholder="E-mail">
+            </li>
+            <li class="clearfix">
+               <textarea cols="30" rows="10" placeholder="Message"></textarea>
+               <input type="button" value="SEND MESSAGE">
+            </li>
+         </ul>
+      </section>
+
       <section class="cont01 map"></section>
       <footer class="cont02 footer"></footer>
    </div>
