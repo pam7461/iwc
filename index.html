@@ -66,11 +66,37 @@
       .we_are_img{text-align:center;}
       .we_are_img>img{width:18.75%;}
 
-      .work{background:cyan;}
-      .blog{background:magenta;}
+      /* work 스타일 */
+      .work{height:auto;margin:70px 0;}
+      .work_list img{width:100%;vertical-align:top;}
+      .work_list>li{position:relative;}
+      .work_list>li>a>div::after{display:block;content:"";position:absolute;left:0;top:0;background:rgba(0,0,0,0);width:100%;height:100%;transition:0.3s;z-index:1;}
+      .work_list>li:hover>a>div::after{background:rgba(0,0,0,0.5);}
+      .work_list>li>a>div{padding:10px 10px;position:absolute;left:0;top:0px;width:100%;height:100%;z-index:10;}
+      .work_list>li>a>div>p{color:red;transform:translateY(-20px);opacity:0;transition:0.3s;text-align:left;}
+      .work_list>li:hover>a>div>p{transform:translateY(0px);opacity:1;}
+
+      hr{width:20px;height:2px;margin:0 auto;background:darkblue;}
+
+      /* blog 스타일 */
+      .blog{height:auto;margin:50px auto;}
+      .blog_list>li{margin:50px auto;}
+      .blog_list>li>a>img{width:100%;}
+      .blog_list p{text-align:left;}
+      .blog_list>li>.sub_tit{color:#ccc;}
+
+
+
+
       .contact{background:yellow;}
       .map{background:gray;}
       .footer{background:red;}
+
+
+
+
+
+
 
       /* 테블릿 스타일 */
       @media(min-width:768px){
@@ -110,6 +136,13 @@
          .we_are_img{height:100px;}
          .we_are_img>img{width:50%;max-width:100px;}
 
+         /* work 스타일 */
+         .work_list>li{width:50%;}
+         .work_list>li{float:left;}
+
+         /* blog 스타일 */
+         .blog_list>li{box-sizing:border-box;width:33.33333333333333%;padding:0 0.5555555555555556%;float:left;}
+
 
 
 
@@ -119,9 +152,17 @@
       @media(min-width:1132px){
 
          /* we_are 스타일 */
-         .we_are>.we_are_tit{}
          .we_are_tit>.sec_tit{box-sizing:border-box; float:left;width:37.5%;padding-left:0.5555555555555556%;padding-right:0.5555555555555556%; text-align:left;}
          .we_are_tit>.sec_txt{box-sizing:border-box; float:right;width:62.5%;border-left:2px solid gray;padding-left:3%;padding-right:0.5555555555555556%;text-align:left;}
+
+         /* work 스타일 */
+         .work_list>li{width:25%;}
+   
+         /* blog 스타일 */
+         .blog>.sec_tit{float:left;box-sizing:border-box;width:25%;padding:0 0.5555555555555556%;padding-top:120px;}
+         .blog>.blog_list{float:right;box-sizing:border-box;width:75%;}
+         .blog_list>li{padding:0 0.7407407407407407%;}
+
 
       }
 
@@ -219,8 +260,109 @@
          </article>
       </section>
 
-      <section class="cont01 work"></section>
-      <section class="cont02 blog"></section>
+      <!-- work 섹션 -->
+      <section class="cont01 work">
+         <h2 class="sec_tit">WORK</h2>
+         <ul class="work_list clearfix">
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work01.jpg" alt="작업01">
+                  <div>
+                     <p class="sub_tit">Running</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work02.jpg" alt="작업02">
+                  <div>
+                     <p class="sub_tit">Rugby</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work03.jpg" alt="작업03">
+                  <div>
+                     <p class="sub_tit">Weight</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work04.jpg" alt="작업04">
+                  <div>
+                     <p class="sub_tit">Maraton</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work05.jpg" alt="작업05">
+                  <div>
+                     <p class="sub_tit">Boxing</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work06.jpg" alt="작업06">
+                  <div>
+                     <p class="sub_tit">Ice Hockey</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work07.jpg" alt="작업07">
+                  <div>
+                     <p class="sub_tit">Skate Board</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work08.jpg" alt="작업08">
+                  <div>
+                     <p class="sub_tit">Basketball</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+         </ul>
+      </section>
+
+      <hr>
+
+      <!-- blog 섹션 -->
+      <section class="cont02 blog clearfix">
+         <h2 class="sec_tit">BLOG</h2>
+         <ul class="blog_list clearfix">
+            <li>
+               <a href="#"><img src="images/p-images/blog01.jpg" alt="블로그01"></a>
+               <p class="sub_tit">OCT 30, 2016</p>
+               <a href="#"><p class="sec_txt">Lorem ipsum dolor sit</p></a>
+            </li>
+            <li>
+               <a href="#"><img src="images/p-images/blog02.jpg" alt="블로그02"></a>
+               <p class="sub_tit">OCT 30, 2016</p>
+               <a href="#"><p class="sec_txt">Lorem ipsum dolor sit</p></a>
+            </li>
+            <li>
+               <a href="#"><img src="images/p-images/blog03.jpg" alt="블로그03"></a>
+               <p class="sub_tit">OCT 30, 2016</p>
+               <a href="#"><p class="sec_txt">Lorem ipsum dolor sit</p></a>
+            </li>
+         </ul>
+      </section>
+
       <section class="cont02 contact"></section>
       <section class="cont01 map"></section>
       <footer class="cont02 footer"></footer>

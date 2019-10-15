@@ -38,7 +38,9 @@
       #wrap{width:100%;max-width:1450px;margin:0 auto;}
       .cont02{width:80%;margin:0 auto;}
       /* 임시 */.cont01,.cont02{height:200px;}
-
+      .sec_tit{font-size:3rem;color:darkblue;}
+      .sub_tit{font-size:1.2rem;color:blue;}
+      .sec_txt{font-family: 'Hepta Slab', serif;}
       
       /* 헤더스타일 */
       .header{
@@ -63,13 +65,103 @@
       .banner li:nth-child(2),.banner li:nth-child(3){display:none;}
       .banner img{width:100%;}
       
-      .we_are{background:blue;}
+      /* we_are 섹션 */
+      .we_are{background:white;height:auto;border-bottom:2px solid gray;}
+      .we_are>article{display:flex;flex-flow:column nowrap;}
+      .we_are>.we_are_tit{height:200px;margin:50px auto;display:flex;flex-flow:column nowrap;justify-content:space-around;align-items: center;}
+      .we_are_content{margin-bottom:50px;}
+      .we_are_content>ul{display:flex; flex-flow:column nowrap;}
+      .we_are_content>ul>li{padding:0 0.5555555555555556%;}
+      .we_are_content ul ul{display:flex;flex-flow:column nowrap;align-items:center;}
+      .we_are_content ul ul li{margin:10px auto;}
+      .we_are_img{height:50px;}
+      .we_are_content ul ul li:last-child{text-align:center;font-size:0.9em;}
+      .we_are_img img{width:60px;}
+
+      /* work 스타일 */
+      .work{height:auto;}
+      .work_list{display:flex;flex-flow:column nowrap;}
+      .work_list>li{position:relative;}
+      .work_list img{width:100%;}
+      .work_list li .bg_color{position:absolute;left:0;top:0;background:darkblue;width:100%;height:100%;opacity:0;transition:0.3s;}
+      .work_list li:hover .bg_color{opacity:0.5;}
+      .work_list li .bg_txt{position:absolute;left:0;top:0;}
+      .work_list li .bg_txt>p{text-align:left;padding:20px;color:red;transform:translateY(-20px);transition:0.3s;opacity: 0;}
+      .work_list li:hover .bg_txt>p{opacity: 1;transform:translateY(0px);}
       
-      .work{background:cyan;}
-      .blog{background:magenta;}
+      /* blog 스타일 */
+      .blog{height:auto;display:flex;flex-flow:column nowrap;}
+      .blog>.blog_list{display:flex;flex-flow:column nowrap;}
+
+      .blog img{width:100%;}
+
+
+
+
+
       .contact{background:yellow;}
       .map{background:gray;}
       .footer{background:red;}
+
+      /* 테블릿 스타일 */
+      @media(min-width:768px){
+         /* 헤더 스타일 */
+      .header{
+         height:60px;
+         position: static;
+      }
+      .tgl_btn{display:none;}
+      .nav{
+         width:60%;
+         background:transparent; 
+         position:static;
+         display:flex;
+         flex-flow:row nowrap;
+         justify-content:flex-end;
+         align-items:center;
+      }
+      .nav>p{padding:0;border-bottom:none;margin-left:30px;}
+      .nav>p>a{color:darkblue;}
+      
+      /* we_are 스타일 */
+      .we_are_content>ul{flex-flow:row nowrap;}
+
+      /* work 스타일 */
+      .work_list{flex-flow:row wrap;}
+      .work_list>li{width:50%;}
+      
+      /* blog 스타일 */
+      .blog>.blog_list{flex-flow:row nowrap;}
+
+
+
+
+
+
+   }
+
+
+      /* pc 스타일 */
+      @media(min-width:1132px){
+         /* we_are 스타일   */
+      .we_are>.we_are_tit{
+         flex-flow:row nowrap;
+         justify-content:flex-start;
+      }
+      .we_are_tit>.sec_tit{flex:6 6 0;}
+      .we_are_tit>.sec_txt{flex:10 10 0;border-left:2px solid gray;padding-left:30px;}
+
+      /* work 스타일 */
+      .work_list>li{width:25%;}
+
+      /* blog 스타일 */
+      .blog{flex-flow:row nowrap;}
+      .blog>.sec_tit{flex:1 1 0;}
+      .blog>.blog_list{flex:3 3 0;}
+
+
+
+   }
    </style>
 </head>
 <body>
@@ -160,10 +252,116 @@
             </ul>
          </article>
       </section>
-   
 
-      <section class="cont01 work"></section>
-      <section class="cont02 blog"></section>
+      <!-- work 섹션 -->
+      <section class="cont01 work">
+         <h2 class="sec_tit">WORK</h2>
+         <ul class="work_list">
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work01.jpg" alt="작업01">
+                  <div class="bg_color">배경</div>
+                  <div class="bg_txt">
+                     <p class="sub_tit">Running</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work02.jpg" alt="작업02">
+                  <div class="bg_color">배경</div>
+                  <div class="bg_txt">
+                     <p class="sub_tit">Rugby</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work03.jpg" alt="작업03">
+                  <div class="bg_color">배경</div>
+                  <div class="bg_txt">
+                     <p class="sub_tit">Weight</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work04.jpg" alt="작업04">
+                  <div class="bg_color">배경</div>
+                  <div class="bg_txt">
+                     <p class="sub_tit">Maraton</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work05.jpg" alt="작업05">
+                  <div class="bg_color">배경</div>
+                  <div class="bg_txt">
+                     <p class="sub_tit">Boxing</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work06.jpg" alt="작업06">
+                  <div class="bg_color">배경</div>
+                  <div class="bg_txt">
+                     <p class="sub_tit">Ice Hockey</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work07.jpg" alt="작업07">
+                  <div class="bg_color">배경</div>
+                  <div class="bg_txt">
+                     <p class="sub_tit">Skate Board</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="images/p-images/work08.jpg" alt="작업08">
+                  <div class="bg_color">배경</div>
+                  <div class="bg_txt">
+                     <p class="sub_tit">Basketball</p>
+                     <p class="sec_txt">WEB/PRING</p>
+                  </div>
+               </a>
+            </li>
+         </ul>
+      </section>
+
+      <!-- blog 섹션 -->
+      <section class="cont02 blog">
+         <h2 class="sec_tit">BLOG</h2>
+         <ul class="blog_list">
+            <li>
+               <a href="#"><img src="images/p-images/blog01.jpg" alt="블로그01"></a>
+               <p class="sub_tit">OCT 30, 2016</p>
+               <a href="#"><p class="sec_txt">Lorem ipsum dolor sit</p></a>
+            </li>
+            <li>
+               <a href="#"><img src="images/p-images/blog02.jpg" alt="블로그02"></a>
+               <p class="sub_tit">OCT 30, 2016</p>
+               <a href="#"><p class="sec_txt">Lorem ipsum dolor sit</p></a>
+            </li>
+            <li>
+               <a href="#"><img src="images/p-images/blog03.jpg" alt="블로그03"></a>
+               <p class="sub_tit">OCT 30, 2016</p>
+               <a href="#"><p class="sec_txt">Lorem ipsum dolor sit</p></a>
+            </li>
+         </ul>
+      </section>
+
       <section class="cont02 contact"></section>
       <section class="cont01 map"></section>
       <footer class="cont02 footer"></footer>
